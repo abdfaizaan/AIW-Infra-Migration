@@ -1,0 +1,16 @@
+[
+    {
+      "Name": "Hands-on Lab: Setup Azure Migrate Project",
+      "Language": "English",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/Raghukashyap1143/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/gettingstartedfile-v2.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/Raghukashyap1143/AIW-Infra-Migration/refs/heads/guided-labs/Labfiles/ms-spl-migrate-windows-servers-to-azure-hol2-ex1-v1.md",
+          "Order": 2
+        }       
+      ]
+    }
+  ]
