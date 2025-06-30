@@ -2,7 +2,7 @@
 
 ### Task 1: Using VM Scale Sets to Drive Business Resiliency
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
+1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials.
     
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     
@@ -26,9 +26,9 @@
 
    ![](Images/upd-e4-t1-s7.png)
 
-6. In the Operating system state select **Specialized**.
+6. In the Operating System state, select **Specialized**.
 
-7. Select an image definition and click **Create new (1)** and create a VM Image definition by providing the following details and then click **Ok (6)**: 
+7. Select an image definition and click **Create new (1)** and create a VM Image definition by providing the following details, and then click **Ok (6)**: 
   
    - Image VM definition name: **imagedefinition<inject key="DeploymentID" enableCopy="false" /> (2)**
 
@@ -56,14 +56,14 @@
 
 13. Select **Standard_D2s_v3** for the **size**.
 
-14. Select the License type as **Window server**.
+14. Select the License type as **Windows Server**.
 
      ![](Images/upd-License.png)
 
 15. Select **Review + create** and then **Create**.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click on Validate button.
+    > - Click on the Validate button.
     > - If you receive a success message, you can proceed to the next task.
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -72,7 +72,7 @@
 
 ### Task 2: Azure auto manage
 
-In this task, you will Enable Automanage on existing machines.
+In this task, you will enable Automanage on existing machines.
 
 1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials below.
     
@@ -86,7 +86,7 @@ In this task, you will Enable Automanage on existing machines.
    
    ![](Images/upd-zero-vm-list-view.png)
 
-4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test or Custom profile**.
+4. Under **Configuration profile**, select your profile type: **Azure Best Practices - Production or Azure Best Practices - Dev/Test, or Custom profile**.
    
    ![](Images/upd-existing-vm-quick-create.png)
    
@@ -106,9 +106,9 @@ In this task, you will Enable Automanage on existing machines.
 
 6. Click **Create**.
 
-  ## You Have successfully completed the Lab
+  ## You have successfully completed the Lab
 
-  >**Note**: If you complete the lab ahead of the allotted time, please review and validate . Once validation is successful, you may proceed to delete the respective lab.
+  >**Note**: If you complete the lab ahead of the allotted time, please review and validate. Once validation is successful, you may proceed to delete the respective lab.
 
 - Here are the steps to delete the lab:
 
