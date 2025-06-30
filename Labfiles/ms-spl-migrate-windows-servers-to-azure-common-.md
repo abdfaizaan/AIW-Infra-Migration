@@ -1,12 +1,12 @@
 # Migrate Windows Servers from Hyper-V to Azure
 
-## Migrating your apps and your data, leveraging Microsoft services and tools including Azure Migrate: Server Migration
+## Migrating your apps and your data, leveraging Microsoft services and tools, including Azure Migrate: Server Migration
 
-In this Guided Lab, you will learn about Azure migration and how all pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
+In this Guided Lab, you will learn about Azure migration and how all pre-migration steps, such as discovery, assessments, and right-sizing of on-premises resources, are included for infrastructure, data, and applications. Azure Migrate provides a simplified migration, modernization, and optimization service for Azure.
 
 ### Task 1: Create a Storage Account
 
-In this task, you will create a new Azure Storage Account that will be used by Migration and for storage of your virtual machine data during migration.
+In this task, you will create a new Azure Storage Account that will be used by Migration and for the storage of your virtual machine data during migration.
 
 > **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance. For example, the CAF Migration Blueprint and CAF Foundation Blueprint can be used to deploy a pre-defined landing zone and demonstrate the potential of an Infrastructure as Code (IaC) approach to infrastructure resource management. For more information, see [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
 
@@ -38,7 +38,7 @@ In this task, you will create a new Azure Storage Account that will be used by M
 
    ![Screenshot of the Azure portal showing the create storage account blade.](Images/storage-dataprotection-0107.png)
 
-6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
+6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers, as the soft delete-enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
 
    ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.4.png)
 
@@ -78,17 +78,17 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
      ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/E1T2S3-0107.png?raw=true "Replication provider download link")
 
-5. Return to the **Discover** page in your browser select the blue **Download** button and download the registration key file.
+5. Return to the **Discover** page in your browser, select the blue **Download** button, and download the registration key file.
 
      ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S4-0107.png "Download registration key file")
 
 6. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
 
-    > **Note:** If you are prompted with a pop-up like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
+    > **Note:** If you are prompted with a pop-up, like the latest version of the Provider is installed on this server. Would you like to proceed to registration? select **Yes**. (You can directly jump to the next step in that case.)
   
      ![Screenshot of the ASR provider installer.](Images/upd-asr-provider-install.png "Azure Site Recovery Provider Setup")
 
-7. When the installation has completed select **Register**. Browse to the location of the key file you downloaded. When the key is loaded select **Next**.
+7. When the installation has completed, select **Register**. Browse to the location of the key file you downloaded. When the key is loaded, select **Next**.
 
      ![Screenshot of the ASR provider registration settings.](Images/upd-asr-registration.png "Key file registration")
 
@@ -130,7 +130,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot highlighting the 'Replicate' button in the 'Azure Migrate: Server Migration' panel of the Azure Migrate - Servers blade.](Images/replicatenw.png "Replicate link")
    
-2. Under the **Specific Intent** page, provide the below details:
+2. Under the **Specific Intent** page, provide the following details:
 
     -  What do you want to migrate? : Select **Servers or Virtual machines (VM)** **(1)**
     
@@ -148,11 +148,11 @@ In this task, you will configure and enable the replication of your on-premises 
 
      ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](Images/replicate1.png "Replicate - Virtual machines")
 
-5. On the **Target settings** tab, select the below information,
+5. On the **Target settings** tab, select the information below,
 
    - Select your subscription and the existing **SmartHotelHostRG (1)** resource group. 
 
-   - **Cache storage account**: Select the storage account here from the drop-down which you create in task 1 **(2)**. 
+   - **Cache storage account**: Select the storage account here from the drop-down that you created in task 1 **(2)**. 
 
    - **Virtual Network**: Select **SmartHotelVNet (3)**. 
 
@@ -162,9 +162,9 @@ In this task, you will configure and enable the replication of your on-premises 
    
      ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/E1T3S5-0107.png)
 
-   > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
+   > **Note:** For simplicity, in this lab, you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-7. On the **Compute** tab, select the below configuration,
+7. On the **Compute** tab, select the configuration below,
 
    - Select the **Standard_F2s_v2** VM size for each virtual machine. 
 
@@ -273,6 +273,6 @@ In this task, I migrated the **UbuntuWAF**, **smarthotelweb1**, and **smarthotel
 
 ### Summary
 
-In this lab, you had learned to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. Created a storage account for migration data, registered the Hyper-V host with Azure Migrate, and enabled replication of on-premises VMs. Configured static private IP addresses for the replicated VMs and performed their migration to Azure, ensuring successful deployment and resource creation in the target resource group.
+In this lab, you learned to migrate Windows Servers from Hyper-V to Azure using Azure Migrate: Server Migration. Created a storage account for migration data, registered the Hyper-V host with Azure Migrate, and enabled replication of on-premises VMs. Configured static private IP addresses for the replicated VMs and performed their migration to Azure, ensuring successful deployment and resource creation in the target resource group.
 
-### Proceed to next 
+### Proceed to the next 
