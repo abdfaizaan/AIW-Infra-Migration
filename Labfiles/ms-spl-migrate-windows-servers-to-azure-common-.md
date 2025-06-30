@@ -28,15 +28,15 @@ In this task, you will create a new Azure Storage Account that will be used by M
   
    - Redundancy: **Locally-redundant storage (LRS) (6)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](Images/HOL1-EX3-T1-S2.png "Storage account settings")
+     ![Screenshot of the Azure portal showing the create storage account blade.](Images/create-storage-0107.png "Storage account settings")
 
-3. Select **Review + Create**, then select **Create**.
+3. Select **Review + Create (7)**, then select **Create**.
 
 4. Once the storage account is deployed, click on **Go to resource** to open it.
 
 5. Select **Data protection** under **Data management** from the left-hand side menu of storage account.
 
-   ![Screenshot of the Azure portal showing the create storage account blade.](Images/1.3.png)
+   ![Screenshot of the Azure portal showing the create storage account blade.](Images/storage-dataprotection-0107.png)
 
 6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and containers as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. Click on **Save**.
 
@@ -50,7 +50,11 @@ In this task, you created a new Azure Storage Account that will be used for Migr
 
 In this task, you will register your Hyper-V host(LabVM) with the Migration and Modernization service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
-1. Return to the **Azure Migrate | Servers, databases and web apps** blade in the Azure Portal, and select **Servers, databases and web apps (1)** under **Migration goals** on the left. Under **Migration Tools**, select **Discover (2)**.
+1. Search for **Azure Migrate** in the search blade in the Azure Portal, and select **Azure Migrate**
+
+     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](Images/E1T2S1-0107.png "Azure Migrate: Server Migration - Discover")
+
+1. Select **Servers, databases and web apps (1)** under **Migration goals** on the left. Under **Migration Tools**, select **Discover (2)**.
 
    **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Migration and modernization**, then selecting **Add tool(s)**.
    
@@ -72,11 +76,11 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
   
 4. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/upd-e3-t2-s3.png?raw=true "Replication provider download link")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](Images/E1T2S3-0107.png?raw=true "Replication provider download link")
 
 5. Return to the **Discover** page in your browser select the blue **Download** button and download the registration key file.
 
-     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/upd-e3-t2-s4.png "Download registration key file")
+     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](Images/E1T2S4-0107.png "Download registration key file")
 
 6. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
 
@@ -104,11 +108,11 @@ In this task, you will register your Hyper-V host(LabVM) with the Migration and 
 
 12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/upd-discover-6.png "Finalizing registration...")
+     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](Images/E1T2S11-0107.png "Finalizing registration...")
 
 13. Once the registration is complete, close the **Discover machines** panel using **X** button.
 
-     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/upd-discover-7.png "Registration finalized")
+     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](Images/E1T2S13-0107.png "Registration finalized")
 
 14. The **Migration and Modernization** panel should now show 7 discovered servers.
 
@@ -148,7 +152,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
    - Select your subscription and the existing **SmartHotelHostRG (1)** resource group. 
 
-   - **Replication storage account**: Enter the storage account here from the drop-down which you create in task 1 **(2)**. 
+   - **Cache storage account**: Select the storage account here from the drop-down which you create in task 1 **(2)**. 
 
    - **Virtual Network**: Select **SmartHotelVNet (3)**. 
 
@@ -156,7 +160,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
    - Leave other values as default and select **Next (5)**.
    
-     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/HOL1-EX3-S6.png)
+     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](Images/E1T3S5-0107.png)
 
    > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
