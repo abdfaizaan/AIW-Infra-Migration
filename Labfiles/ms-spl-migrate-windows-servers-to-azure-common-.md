@@ -272,7 +272,7 @@ In this task, you will perform a migration of the UbuntuWAF, smarthotelweb1, and
 
 #### Task summary
 
-In this task, I migrated the **UbuntuWAF**, **smarthotelweb1**, and **smarthotelweb2** VMs to Azure. I initiated the migration process, monitored progress, and confirmed the successful creation of the resources in the **SmartHotelHostRG** resource group.
+In this task, you migrated the **UbuntuWAF**, **smarthotelweb1**, and **smarthotelweb2** VMs to Azure. I initiated the migration process, monitored progress, and confirmed the successful creation of the resources in the **SmartHotelHostRG** resource group.
 
 ### Summary
 
